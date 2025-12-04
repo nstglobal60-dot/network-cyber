@@ -1,0 +1,122 @@
+/* CyberShield Pro - Dark enterprise theme */
+:root{
+  --bg:#05080f; --panel:#0b1220; --card:#0f1a2e;
+  --muted:#94a3b8; --text:#e7f2ff; --accent:#00ffd9; --accent2:#2979ff;
+  --radius:14px; --max-width:1200px;
+  font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+}
+*{box-sizing:border-box}
+html,body{height:100%;margin:0;background:linear-gradient(180deg,var(--bg),#041027);color:var(--text);-webkit-font-smoothing:antialiased}
+.container{max-width:var(--max-width);margin:0 auto;padding:28px}
+
+/* Header */
+.site-header{position:sticky;top:0;background:rgba(2,6,23,0.6);backdrop-filter:blur(6px);border-bottom:1px solid rgba(255,255,255,0.03);z-index:80}
+.header-inner{display:flex;align-items:center;justify-content:space-between;gap:12px}
+.logo{display:flex;gap:10px;align-items:center;color:var(--accent);font-weight:700;text-decoration:none}
+.nav{display:flex;gap:16px;align-items:center}
+.nav a{color:var(--muted);text-decoration:none;padding:8px;border-radius:8px}
+.nav a:hover{color:#fff}
+#menu-toggle{display:none;background:transparent;border:0;color:var(--muted)}
+
+/* Buttons */
+.btn{display:inline-block;padding:10px 16px;border-radius:10px;font-weight:700;border:0;cursor:pointer}
+.primary{background:linear-gradient(90deg,var(--accent),var(--accent2));color:#001a22}
+.outline{border:1px solid rgba(255,255,255,0.06);color:var(--accent);background:transparent}
+.small{font-size:13px}
+
+/* Loader */
+#loading-overlay{position:fixed;inset:0;display:flex;align-items:center;justify-content:center;background:linear-gradient(180deg, rgba(2,6,23,0.9), rgba(2,6,23,0.95));z-index:9999}
+.loader{display:flex;flex-direction:column;align-items:center;gap:12px}
+.loader-svg{width:86px;height:86px;animation:spin 2s linear infinite;opacity:0.95}
+.loader-text{color:var(--muted);font-size:14px}
+
+/* Hero */
+.hero{padding:60px 0;}
+.hero-grid{display:grid;grid-template-columns:1fr 420px;gap:28px;align-items:center}
+.hero h1{font-size:36px;margin:0 0 12px;font-weight:800;color:#fff}
+.lead{color:var(--muted);margin:0 0 18px}
+.hero-cta{display:flex;gap:12px;margin-bottom:18px}
+.trust-list{display:flex;gap:18px;list-style:none;padding:0;margin:12px 0 18px;color:var(--muted)}
+
+/* Cards */
+.card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(0,0,0,0.03));border-radius:12px;padding:14px;border:1px solid rgba(255,255,255,0.03)}
+.stat{min-width:120px;text-align:left}
+.stat-value{font-size:18px;font-weight:800;color:var(--accent)}
+.stat-label{font-size:12px;color:var(--muted)}
+
+/* Device mock */
+.device-mock{display:flex;justify-content:center}
+.network-card{width:360px;background:linear-gradient(180deg,#071427 15%, #071028 100%);border-radius:14px;padding:14px;border:1px solid rgba(255,255,255,0.04);box-shadow: 0 8px 30px rgba(0,0,0,0.6)}
+.card-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px}
+.chip{background:rgba(255,255,255,0.02);padding:6px 10px;border-radius:999px;font-size:12px}
+.status{padding:6px 10px;border-radius:8px;font-weight:700;font-size:12px}
+.status.online{background:linear-gradient(90deg,var(--accent),var(--accent2));color:#001}
+
+/* Sections */
+.section{padding:44px 0}
+.section-title{font-size:22px;margin:0 0 6px;color:#fff;font-weight:800;text-align:center}
+.section-sub{color:var(--muted);margin:0 0 24px;text-align:center}
+
+/* Services grid */
+.services-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px}
+.service-card{padding:18px;border-radius:12px;background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));border:1px solid rgba(255,255,255,0.03);transition:transform .28s ease,box-shadow .28s ease}
+.service-card:hover{transform:translateY(-6px);box-shadow:0 10px 30px rgba(0,102,255,0.06)}
+.service-card h3{margin:8px 0 6px}
+.service-card p{color:var(--muted);font-size:14px}
+
+/* Benefit grid */
+.benefits-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px}
+.benefit{padding:16px;border-radius:12px}
+
+/* Two column areas */
+.two-col{display:grid;grid-template-columns:1fr 360px;gap:20px;align-items:start}
+.card.panel{padding:18px}
+
+/* Testimonials */
+.testimonials .carousel{display:flex;gap:16px;overflow-x:auto;padding:4px 0}
+.testimonial{min-width:320px;max-width:540px;padding:18px;border-radius:12px}
+
+/* Pricing */
+.price-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}
+.price-card{text-align:center;padding:20px;border-radius:12px}
+.price-card.featured{transform:translateY(-8px);box-shadow:0 20px 40px rgba(0,102,255,0.12)}
+.price-amount{font-size:22px;font-weight:800;margin:12px 0;color:var(--accent)}
+
+/* Contact */
+.contact-grid{display:grid;grid-template-columns:1fr 360px;gap:20px}
+.contact-form label{display:block;margin-top:8px;color:var(--muted);font-size:13px}
+.contact-form input, .contact-form textarea{width:100%;padding:12px;border-radius:10px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:var(--text);margin-top:6px}
+.form-actions{display:flex;gap:10px;margin-top:12px;align-items:center}
+.note.small{color:var(--muted);font-size:13px;margin-top:12px}
+
+/* Floating chat */
+.live-toggle{position:fixed;right:18px;bottom:18px;background:linear-gradient(90deg,var(--accent),var(--accent2));border:0;width:56px;height:56px;border-radius:14px;display:flex;align-items:center;justify-content:center;color:#001;z-index:60;font-size:22px}
+
+/* Footer */
+.site-footer{padding:28px 0;border-top:1px solid rgba(255,255,255,0.03);color:var(--muted)}
+.footer-grid{display:grid;grid-template-columns:1fr 150px 120px 120px;gap:18px;align-items:start}
+
+/* Misc */
+.small{font-size:13px}
+.muted{color:var(--muted)}
+.toast{position:fixed;left:50%;transform:translateX(-50%);bottom:24px;background:linear-gradient(90deg,var(--accent),var(--accent2));color:#001;padding:12px 18px;border-radius:10px;display:none;z-index:9999}
+
+/* Responsive */
+@media (max-width:980px){
+  .hero-grid{grid-template-columns:1fr}
+  .device-mock{display:none}
+  .two-col{grid-template-columns:1fr}
+  .footer-grid{grid-template-columns:1fr 1fr}
+  #menu-toggle{display:block}
+  .nav{position:fixed;right:12px;top:64px;background:linear-gradient(180deg, rgba(1,4,10,0.95), rgba(6,10,18,0.95));padding:12px;border-radius:12px;flex-direction:column;display:none}
+  .nav.show{display:flex}
+}
+@media (max-width:520px){
+  .container{padding:18px}
+  .price-grid{grid-template-columns:1fr}
+  .services-grid{grid-template-columns:1fr}
+  .hero h1{font-size:22px}
+}
+
+/* Animations */
+@keyframes spin{to{transform:rotate(360deg)}}
